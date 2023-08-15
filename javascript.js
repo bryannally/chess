@@ -154,7 +154,6 @@ function reset() {
         if (classes.includes(turn)) {
           piece.classList.remove("unselect")
           piece.setAttribute("id", "selected")
-          change_turn()
         }      
       }
       else {
@@ -208,36 +207,42 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
             if ((box.id[0] == current[0]) && (box.id[1] == (parseInt(current[1]) - 2)) && (box.innerHTML == "") && current[1] == "7") {
               if (document.getElementById(`${current[0]}6`).innerHTML == "") {
                 box.innerHTML = ""
                 box.appendChild(findselect)
                 unselect_selected()
+                change_turn()
               } 
             }
             if ((box.id.charCodeAt(0) == (current.charCodeAt(0) + 1) || (box.id.charCodeAt(0) == (current.charCodeAt(0) - 1))) && (box.id[1] == (parseInt(current[1]) - 1)) && (box.innerHTML != "") && (color != currcolor)) {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           else {
             if ((box.id[0] == current[0]) && (box.id[1] == (parseInt(current[1]) + 1)) && (box.innerHTML == "")) {
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
             if ((box.id[0] == current[0]) && (box.id[1] == (parseInt(current[1]) + 2)) && (box.innerHTML == "") && current[1] == "2") {
               if (document.getElementById(`${current[0]}3`).innerHTML == "") {
                 box.innerHTML = ""
                 box.appendChild(findselect)
                 unselect_selected()
+                change_turn()
               } 
             }
             if((box.id.charCodeAt(0) == (current.charCodeAt(0) + 1) || (box.id.charCodeAt(0) == (current.charCodeAt(0) - 1))) && (box.id[1] == (parseInt(current[1]) + 1)) && (box.innerHTML != "") && (color != currcolor)) {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
         }
       }
@@ -248,6 +253,7 @@ function reset() {
             box.innerHTML = ""
             box.appendChild(findselect)
             unselect_selected()
+            change_turn()
           }
         }
       }
@@ -273,6 +279,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           //horizontal movement
@@ -294,6 +301,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
         }
@@ -314,6 +322,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           if ((box.id[1] > parseInt(current[1])) && (box.id.charCodeAt(0) < current.charCodeAt(0)) && (-(box.id[1] - parseInt(current[1])) == (box.id.charCodeAt(0) - current.charCodeAt(0)))) {
@@ -327,6 +336,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           if ((box.id[1] < parseInt(current[1])) && (box.id.charCodeAt(0) > current.charCodeAt(0)) && (-(box.id[1] - parseInt(current[1])) == (box.id.charCodeAt(0) - current.charCodeAt(0)))) {
@@ -340,6 +350,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           if ((box.id[1] < parseInt(current[1])) && (box.id.charCodeAt(0) < current.charCodeAt(0)) && ((box.id[1] - parseInt(current[1])) == (box.id.charCodeAt(0) - current.charCodeAt(0)))) {
@@ -353,6 +364,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
         }
@@ -373,6 +385,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           if ((box.id[1] > parseInt(current[1])) && (box.id.charCodeAt(0) < current.charCodeAt(0)) && (-(box.id[1] - parseInt(current[1])) == (box.id.charCodeAt(0) - current.charCodeAt(0)))) {
@@ -386,6 +399,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           if ((box.id[1] < parseInt(current[1])) && (box.id.charCodeAt(0) > current.charCodeAt(0)) && (-(box.id[1] - parseInt(current[1])) == (box.id.charCodeAt(0) - current.charCodeAt(0)))) {
@@ -399,6 +413,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           if ((box.id[1] < parseInt(current[1])) && (box.id.charCodeAt(0) < current.charCodeAt(0)) && ((box.id[1] - parseInt(current[1])) == (box.id.charCodeAt(0) - current.charCodeAt(0)))) {
@@ -412,6 +427,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           //vertical movement
@@ -433,6 +449,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
           //horizontal movement
@@ -454,6 +471,7 @@ function reset() {
               box.innerHTML = ""
               box.appendChild(findselect)
               unselect_selected()
+              change_turn()
             }
           }
         }
@@ -465,6 +483,7 @@ function reset() {
             box.innerHTML = ""
             box.appendChild(findselect)
             unselect_selected()
+            change_turn()
           }
         }
       }
