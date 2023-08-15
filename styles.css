@@ -1,0 +1,64 @@
+body {
+  color: black;
+}
+
+.menu {
+  background-color: white;
+}
+body {
+  padding-left: 10%;
+  padding-right: 10%;
+  background-color: black;
+  color: white;
+}
+
+#board {
+  margin: 2%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: minmax(1fr, 1fr);
+  border: 2px solid black;
+}
+
+.dark {
+  color: white;
+  background-color: black;
+}
+
+.tan {
+  background-color: tan;
+}
+
+.box {
+  border: 1px solid white;
+  width: 1fr;
+  height: 0;
+  padding-bottom: 50%;
+  display: grid;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+/* .piece {
+  width: 50%;
+} */
+
+#selected {
+  padding-bottom: 200px;
+  width: 70%;
+}
+
+.unselect {
+  width: 50%;
+  padding-bottom: 0px;
+}
+
+
+
+.hide {
+  display: none;
+}
+
+.view {
+  display: grid;
+}
